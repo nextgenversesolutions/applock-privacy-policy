@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AppLock Pro — Terms & Conditions</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f13;
+      color: #e2e2e2;
+      line-height: 1.7;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 50%, #0d0628 100%);
+      padding: 72px 24px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: rgba(29,78,216,.25);
+      top: -150px; right: -100px;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(37,99,235,.2);
+      bottom: -100px; left: -60px;
+    }
+    .hero-icon {
+      width: 80px; height: 80px;
+      background: rgba(255,255,255,.12);
+      border: 2px solid rgba(255,255,255,.2);
+      border-radius: 24px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 36px;
+      backdrop-filter: blur(10px);
+      position: relative; z-index: 1;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      color: #fff;
+      position: relative; z-index: 1;
+    }
+    .hero p {
+      margin-top: 12px;
+      color: rgba(255,255,255,.65);
+      font-size: 15px;
+      position: relative; z-index: 1;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 6px 16px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 100px;
+      font-size: 13px;
+      color: rgba(255,255,255,.8);
+      position: relative; z-index: 1;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .section {
+      background: #1a1a24;
+      border: 1px solid #2a2a3a;
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 20px;
+      transition: border-color .2s;
+    }
+    .section:hover { border-color: #1d4ed8; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .section-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .blue   { background: rgba(29,78,216,.2);  border: 1px solid rgba(29,78,216,.3); }
+    .green  { background: rgba(16,185,129,.2); border: 1px solid rgba(16,185,129,.3); }
+    .orange { background: rgba(245,158,11,.2); border: 1px solid rgba(245,158,11,.3); }
+    .red    { background: rgba(239,68,68,.2);  border: 1px solid rgba(239,68,68,.3); }
+    .purple { background: rgba(109,40,217,.2); border: 1px solid rgba(109,40,217,.3); }
+    .teal   { background: rgba(20,184,166,.2); border: 1px solid rgba(20,184,166,.3); }
+    .yellow { background: rgba(234,179,8,.2);  border: 1px solid rgba(234,179,8,.3); }
+    .gray   { background: rgba(107,114,128,.2);border: 1px solid rgba(107,114,128,.3); }
+
+    .section-header h2 { font-size: 18px; font-weight: 600; color: #fff; }
+    .section-header span { font-size: 12px; color: #6b7280; margin-top: 2px; display: block; }
+
+    p.body {
+      font-size: 14px;
+      color: #9ca3af;
+      line-height: 1.75;
+    }
+
+    .list { list-style: none; }
+    .list li {
+      display: flex;
+      gap: 10px;
+      padding: 8px 0;
+      font-size: 14px;
+      color: #d1d5db;
+      border-bottom: 1px solid #1f1f2e;
+    }
+    .list li:last-child { border-bottom: none; }
+    .list li::before {
+      content: '✓';
+      color: #3b82f6;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .list.no li::before { content: '✗'; color: #ef4444; }
+    .list.dot li::before { content: '•'; color: #6b7280; }
+
+    .highlight {
+      background: rgba(29,78,216,.08);
+      border: 1px solid rgba(29,78,216,.2);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #93c5fd;
+      margin-top: 12px;
+    }
+    .warning {
+      background: rgba(239,68,68,.08);
+      border: 1px solid rgba(239,68,68,.2);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #fca5a5;
+      margin-top: 12px;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, rgba(29,78,216,.15), rgba(37,99,235,.1));
+      border: 1px solid rgba(29,78,216,.3);
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+    }
+    .contact-card h2 { color: #fff; font-size: 20px; margin-bottom: 8px; }
+    .contact-card p  { color: #9ca3af; font-size: 14px; }
+    .contact-card a  {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 28px;
+      background: #1d4ed8;
+      color: #fff;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background .2s;
+    }
+    .contact-card a:hover { background: #2563eb; }
+
+    .nav-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #60a5fa;
+      font-size: 13px;
+      text-decoration: none;
+      text-align: center;
+      width: 100%;
+    }
+    .nav-link:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: #4b5563;
+      font-size: 13px;
+      border-top: 1px solid #1a1a24;
+    }
+
+    @media (max-width: 600px) {
+      .section { padding: 22px 18px; }
+      .hero    { padding: 52px 20px 44px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-icon">📜</div>
+  <h1>Terms & Conditions</h1>
+  <p>AppLock Pro — NextGenVerse Solutions</p>
+  <div class="badge">📅 Effective: March 1, 2026</div>
+</div>
+
+<div class="container">
+
+  <!-- 1. ACCEPTANCE -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon blue">📋</div>
+      <div>
+        <h2>Acceptance of Terms</h2>
+        <span>Agreement to use the app</span>
+      </div>
+    </div>
+    <p class="body">
+      By downloading, installing, or using AppLock Pro ("the App"), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use the App.
+    </p>
+    <div class="highlight">
+      These terms apply to all users of AppLock Pro on Android devices.
+    </div>
+  </div>
+
+  <!-- 2. LICENSE -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon green">🔑</div>
+      <div>
+        <h2>License to Use</h2>
+        <span>What you are allowed to do</span>
+      </div>
+    </div>
+    <p class="body" style="margin-bottom:14px;">We grant you a limited, non-exclusive, non-transferable license to use AppLock Pro for personal, non-commercial purposes.</p>
+    <ul class="list">
+      <li>Install and use the app on your personal Android device</li>
+      <li>Use all features as intended by the app</li>
+      <li>Update the app when updates are available</li>
+    </ul>
+  </div>
+
+  <!-- 3. PROHIBITED -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon red">🚫</div>
+      <div>
+        <h2>Prohibited Activities</h2>
+        <span>What you are NOT allowed to do</span>
+      </div>
+    </div>
+    <ul class="list no">
+      <li>Reverse engineer, decompile, or disassemble the app</li>
+      <li>Use the app for any unlawful or malicious purpose</li>
+      <li>Attempt to gain unauthorized access to other users' devices</li>
+      <li>Distribute, sell, or sublicense the app to third parties</li>
+      <li>Remove or alter any copyright, trademark, or legal notices</li>
+      <li>Use the app to harass, monitor, or spy on others without their consent</li>
+    </ul>
+  </div>
+
+  <!-- 4. APP FEATURES -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon purple">🔐</div>
+      <div>
+        <h2>App Features & Permissions</h2>
+        <span>How the app works</span>
+      </div>
+    </div>
+    <p class="body" style="margin-bottom:14px;">AppLock Pro requires certain device permissions to function correctly:</p>
+    <ul class="list dot">
+      <li>Usage Access — to detect foreground apps and trigger the lock screen</li>
+      <li>Draw Over Other Apps — to show the lock screen overlay</li>
+      <li>Camera — only for the optional Intruder Selfie feature</li>
+      <li>Device Administrator — only for optional Uninstall Protection</li>
+      <li>Boot Completed — to auto-start protection after device reboot</li>
+    </ul>
+    <div class="highlight" style="margin-top:16px;">
+      You are responsible for granting the necessary permissions for the app to function as intended.
+    </div>
+  </div>
+
+  <!-- 5. INTRUDER SELFIE -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon orange">📸</div>
+      <div>
+        <h2>Intruder Selfie Responsibility</h2>
+        <span>Camera feature terms</span>
+      </div>
+    </div>
+    <p class="body" style="margin-bottom:14px;">The Intruder Selfie feature captures photos of unauthorized unlock attempts. By enabling this feature, you acknowledge:</p>
+    <ul class="list dot">
+      <li>Photos are stored only on your device and are never uploaded</li>
+      <li>You are solely responsible for how you use these photos</li>
+      <li>You must comply with local laws regarding photography and privacy</li>
+      <li>You must not use these photos to harass or defame anyone</li>
+    </ul>
+    <div class="warning">
+      ⚠️ Do not use intruder photos for any purpose that violates local privacy laws or individual rights.
+    </div>
+  </div>
+
+  <!-- 6. ADS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon teal">📢</div>
+      <div>
+        <h2>Advertisements</h2>
+        <span>Third-party ads</span>
+      </div>
+    </div>
+    <p class="body">
+      AppLock Pro displays advertisements through Google AdMob and its mediation partners (Meta, AppLovin, Unity). These ads help us keep the app free. We are not responsible for the content of third-party advertisements. Ad personalization is subject to your consent provided in the GDPR dialog.
+    </p>
+  </div>
+
+  <!-- 7. DISCLAIMER -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon yellow">⚠️</div>
+      <div>
+        <h2>Disclaimer of Warranties</h2>
+        <span>No guarantees</span>
+      </div>
+    </div>
+    <p class="body" style="margin-bottom:12px;">
+      AppLock Pro is provided "as is" without warranties of any kind. We do not guarantee that:
+    </p>
+    <ul class="list no">
+      <li>The app will be error-free or uninterrupted at all times</li>
+      <li>The app will be compatible with all Android devices or OS versions</li>
+      <li>The app will prevent 100% of unauthorized access attempts</li>
+    </ul>
+    <div class="warning" style="margin-top:16px;">
+      AppLock Pro is a security tool but cannot guarantee absolute protection. Use it as one layer of your device security.
+    </div>
+  </div>
+
+  <!-- 8. LIMITATION -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon gray">⚖️</div>
+      <div>
+        <h2>Limitation of Liability</h2>
+        <span>Our responsibility limits</span>
+      </div>
+    </div>
+    <p class="body">
+      To the fullest extent permitted by law, NextGenVerse Solutions shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of AppLock Pro, including but not limited to data loss, device damage, or unauthorized access to your device despite using the app.
+    </p>
+  </div>
+
+  <!-- 9. CHANGES -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon blue">🔄</div>
+      <div>
+        <h2>Changes to Terms</h2>
+        <span>We may update these terms</span>
+      </div>
+    </div>
+    <p class="body">
+      We reserve the right to modify these Terms and Conditions at any time. Changes will be reflected by updating the "Effective Date" at the top of this page. Continued use of AppLock Pro after changes constitutes your acceptance of the new terms.
+    </p>
+  </div>
+
+  <!-- 10. GOVERNING LAW -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon green">🌍</div>
+      <div>
+        <h2>Governing Law</h2>
+        <span>Legal jurisdiction</span>
+      </div>
+    </div>
+    <p class="body">
+      These Terms shall be governed by and construed in accordance with applicable laws. Any disputes arising from these Terms shall be resolved through good-faith negotiation. If unresolved, disputes shall be subject to the jurisdiction of the courts in your country of residence.
+    </p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-card">
+    <h2>Questions About These Terms?</h2>
+    <p>Contact us if you have any questions or concerns.</p>
+    <a href="mailto:nextgenversesolutions@gmail.com">✉️ nextgenversesolutions@gmail.com</a>
+  </div>
+
+  <a class="nav-link" href="./index.html">← View Privacy Policy</a>
+
+</div>
+
+<footer>
+  © 2026 NextGenVerse Solutions · AppLock Pro · All rights reserved
+</footer>
+
+</body>
+</html>
