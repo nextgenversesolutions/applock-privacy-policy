@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AppLock Pro — Privacy Policy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f13;
+      color: #e2e2e2;
+      line-height: 1.7;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #6d28d9 0%, #4c1d95 50%, #0d0628 100%);
+      padding: 72px 24px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: rgba(109,40,217,.25);
+      top: -150px; right: -100px;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(124,58,237,.2);
+      bottom: -100px; left: -60px;
+    }
+    .hero-icon {
+      width: 80px; height: 80px;
+      background: rgba(255,255,255,.12);
+      border: 2px solid rgba(255,255,255,.2);
+      border-radius: 24px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 36px;
+      backdrop-filter: blur(10px);
+      position: relative; z-index: 1;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      color: #fff;
+      position: relative; z-index: 1;
+    }
+    .hero p {
+      margin-top: 12px;
+      color: rgba(255,255,255,.65);
+      font-size: 15px;
+      position: relative; z-index: 1;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 6px 16px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 100px;
+      font-size: 13px;
+      color: rgba(255,255,255,.8);
+      position: relative; z-index: 1;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── SECTION ── */
+    .section {
+      background: #1a1a24;
+      border: 1px solid #2a2a3a;
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 20px;
+      transition: border-color .2s;
+    }
+    .section:hover { border-color: #6d28d9; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .section-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .purple { background: rgba(109,40,217,.2); border: 1px solid rgba(109,40,217,.3); }
+    .blue   { background: rgba(37,99,235,.2);  border: 1px solid rgba(37,99,235,.3); }
+    .green  { background: rgba(16,185,129,.2); border: 1px solid rgba(16,185,129,.3); }
+    .orange { background: rgba(245,158,11,.2); border: 1px solid rgba(245,158,11,.3); }
+    .red    { background: rgba(239,68,68,.2);  border: 1px solid rgba(239,68,68,.3); }
+    .pink   { background: rgba(236,72,153,.2); border: 1px solid rgba(236,72,153,.3); }
+    .teal   { background: rgba(20,184,166,.2); border: 1px solid rgba(20,184,166,.3); }
+    .indigo { background: rgba(99,102,241,.2); border: 1px solid rgba(99,102,241,.3); }
+
+    .section-header h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .section-header span {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 2px;
+      display: block;
+    }
+
+    /* ── TABLE ── */
+    .table-wrap { overflow-x: auto; margin-top: 8px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th {
+      text-align: left;
+      padding: 10px 14px;
+      color: #9ca3af;
+      font-weight: 500;
+      border-bottom: 1px solid #2a2a3a;
+      white-space: nowrap;
+    }
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #1f1f2e;
+      color: #d1d5db;
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(109,40,217,.06); }
+    td strong { color: #c4b5fd; font-weight: 500; }
+
+    /* ── LIST ── */
+    .list { list-style: none; }
+    .list li {
+      display: flex;
+      gap: 10px;
+      padding: 8px 0;
+      font-size: 14px;
+      color: #d1d5db;
+      border-bottom: 1px solid #1f1f2e;
+    }
+    .list li:last-child { border-bottom: none; }
+    .list li::before {
+      content: '✓';
+      color: #10b981;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .list.no li::before { content: '✗'; color: #ef4444; }
+
+    /* ── CHIP ── */
+    .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .chip {
+      padding: 5px 12px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 500;
+      background: rgba(109,40,217,.15);
+      border: 1px solid rgba(109,40,217,.3);
+      color: #c4b5fd;
+    }
+
+    /* ── THIRD PARTY CARD ── */
+    .service-card {
+      background: #12121a;
+      border: 1px solid #2a2a3a;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-top: 12px;
+    }
+    .service-card h3 { font-size: 15px; color: #fff; font-weight: 600; }
+    .service-card p  { font-size: 13px; color: #9ca3af; margin-top: 6px; line-height: 1.6; }
+    .service-card a  { color: #818cf8; text-decoration: none; font-size: 12px; display: inline-block; margin-top: 8px; }
+    .service-card a:hover { text-decoration: underline; }
+    .service-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .tag-analytics { background: rgba(37,99,235,.2);  color: #93c5fd; }
+    .tag-ads       { background: rgba(245,158,11,.2); color: #fcd34d; }
+    .tag-crash     { background: rgba(239,68,68,.2);  color: #fca5a5; }
+    .tag-push      { background: rgba(16,185,129,.2); color: #6ee7b7; }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight {
+      background: rgba(16,185,129,.08);
+      border: 1px solid rgba(16,185,129,.2);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #6ee7b7;
+      margin-top: 12px;
+    }
+    .highlight strong { color: #10b981; }
+
+    .warning {
+      background: rgba(245,158,11,.08);
+      border: 1px solid rgba(245,158,11,.2);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #fcd34d;
+      margin-top: 12px;
+    }
+
+    /* ── CONTACT ── */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(109,40,217,.15), rgba(79,70,229,.1));
+      border: 1px solid rgba(109,40,217,.3);
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+    }
+    .contact-card h2 { color: #fff; font-size: 20px; margin-bottom: 8px; }
+    .contact-card p  { color: #9ca3af; font-size: 14px; }
+    .contact-card a  {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 28px;
+      background: #6d28d9;
+      color: #fff;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background .2s;
+    }
+    .contact-card a:hover { background: #7c3aed; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: #4b5563;
+      font-size: 13px;
+      border-top: 1px solid #1a1a24;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .section { padding: 22px 18px; }
+      .hero    { padding: 52px 20px 44px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-icon">🔐</div>
+  <h1>Privacy Policy</h1>
+  <p>AppLock Pro — NextGenVerse Solutions</p>
+  <div class="badge">📅 Effective: March 1, 2026</div>
+</div>
+
+<div class="container">
+
+  <!-- 1. INTRO -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon purple">📋</div>
+      <div>
+        <h2>Introduction</h2>
+        <span>What this policy covers</span>
+      </div>
+    </div>
+    <p style="font-size:14px;color:#9ca3af;">
+      AppLock Pro is an app locking application that protects your apps using PIN, password, pattern, or biometric authentication. This Privacy Policy explains what data we collect, how we use it, and your rights as a user.
+    </p>
+    <div class="highlight">
+      <strong>Our Promise:</strong> All your sensitive data — PINs, locked app list, intruder photos — stays on your device only. We never upload it to any server.
+    </div>
+  </div>
+
+  <!-- 2. DATA WE STORE -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon green">🗄️</div>
+      <div>
+        <h2>Data Stored on Your Device</h2>
+        <span>Local only — never uploaded</span>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Data</th><th>Purpose</th></tr>
+        <tr><td><strong>Locked app list</strong></td><td>To know which apps to protect</td></tr>
+        <tr><td><strong>PIN / Password / Pattern</strong> (encrypted)</td><td>Authentication credential</td></tr>
+        <tr><td><strong>Security question & answer</strong></td><td>Account recovery</td></tr>
+        <tr><td><strong>App settings</strong> (theme, language, etc.)</td><td>User preferences</td></tr>
+        <tr><td><strong>Intruder photos</strong> (JPEG, private folder)</td><td>Failed unlock attempt evidence</td></tr>
+        <tr><td><strong>Intruder logs</strong> (timestamp, app name)</td><td>Security history shown to you</td></tr>
+      </table>
+    </div>
+
+    <div style="margin-top:20px;">
+      <p style="font-size:13px;color:#6b7280;margin-bottom:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">We do NOT collect</p>
+      <ul class="list no">
+        <li>Your name, email, or any personal identity</li>
+        <li>Upload photos, PINs, or locked app list to any server</li>
+        <li>Read the content of your locked apps</li>
+        <li>Record your screen or keystrokes</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3. PERMISSIONS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon orange">🔑</div>
+      <div>
+        <h2>Permissions & Why We Need Them</h2>
+        <span>Every permission explained</span>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Permission</th><th>Reason</th></tr>
+        <tr>
+          <td><strong>Usage Access</strong></td>
+          <td>To detect which app is in the foreground and show the lock screen</td>
+        </tr>
+        <tr>
+          <td><strong>Draw Over Other Apps</strong></td>
+          <td>To display the lock screen on top of protected apps</td>
+        </tr>
+        <tr>
+          <td><strong>Camera</strong></td>
+          <td>To capture intruder selfie after failed unlock attempts (optional — can be disabled)</td>
+        </tr>
+        <tr>
+          <td><strong>Biometric / Fingerprint</strong></td>
+          <td>To allow fingerprint as an alternative to PIN</td>
+        </tr>
+        <tr>
+          <td><strong>Boot on Startup</strong></td>
+          <td>To automatically restart the protection service after device reboot</td>
+        </tr>
+        <tr>
+          <td><strong>Foreground Service</strong></td>
+          <td>To run app monitoring service continuously in the background</td>
+        </tr>
+        <tr>
+          <td><strong>Notifications</strong></td>
+          <td>To show a persistent notification while the service is running (Android requirement)</td>
+        </tr>
+        <tr>
+          <td><strong>Read Media (Images/Videos)</strong></td>
+          <td>To display your photos/videos in the secure Vault feature</td>
+        </tr>
+        <tr>
+          <td><strong>Vibrate</strong></td>
+          <td>For haptic feedback on wrong unlock attempts</td>
+        </tr>
+        <tr>
+          <td><strong>Device Administrator</strong></td>
+          <td>To prevent AppLock Pro from being uninstalled without your PIN (optional)</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 4. INTRUDER SELFIE -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon red">📸</div>
+      <div>
+        <h2>Intruder Selfie Feature</h2>
+        <span>Camera usage details</span>
+      </div>
+    </div>
+    <ul class="list" style="margin-top:4px;">
+      <li>Front camera automatically captures a photo after multiple failed unlock attempts</li>
+      <li>Photo is saved only on your device in the app's private folder</li>
+      <li>Photos are visible only to you in the Security section of the app</li>
+      <li>Photos are never uploaded to any server</li>
+      <li>You can disable this feature anytime in Settings → Security</li>
+      <li>You can delete any intruder photo individually from the app</li>
+    </ul>
+    <div class="warning">
+      ⚠️ Camera is only used for intruder selfie capture. It is never used to monitor you or record video.
+    </div>
+  </div>
+
+  <!-- 5. THIRD PARTY -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon blue">🌐</div>
+      <div>
+        <h2>Third-Party Services</h2>
+        <span>External SDKs we use</span>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <h3>Google Firebase <span class="service-tag tag-analytics">Analytics</span><span class="service-tag tag-crash">Crashlytics</span><span class="service-tag tag-push">FCM</span></h3>
+      <p>
+        <strong style="color:#d1d5db;">Analytics</strong> — Anonymous usage data (screens visited, app version, language). No personal data.<br>
+        <strong style="color:#d1d5db;">Crashlytics</strong> — Crash reports to help us fix bugs. Includes device model, Android version, and crash logs.<br>
+        <strong style="color:#d1d5db;">Remote Config</strong> — Remotely configure app features without an update.<br>
+        <strong style="color:#d1d5db;">FCM</strong> — Send push notifications.
+      </p>
+      <a href="https://firebase.google.com/support/privacy" target="_blank">↗ Firebase Privacy Policy</a>
+    </div>
+
+    <div class="service-card">
+      <h3>Google AdMob <span class="service-tag tag-ads">Ads</span></h3>
+      <p>
+        We display ads using Google AdMob. AdMob may collect device identifiers (Advertising ID), approximate location (IP address), and usage data for personalized ads — <strong style="color:#fcd34d;">only with your consent</strong> via the consent dialog shown on first launch.
+      </p>
+      <a href="https://policies.google.com/privacy" target="_blank">↗ Google Privacy Policy</a>
+    </div>
+
+    <div class="service-card">
+      <h3>Ad Mediation Networks <span class="service-tag tag-ads">Ads</span></h3>
+      <p>We use mediation networks to serve ads from multiple providers:</p>
+      <div class="table-wrap" style="margin-top:10px;">
+        <table>
+          <tr><th>Network</th><th>Privacy Policy</th></tr>
+          <tr><td><strong>Meta Audience Network</strong></td><td><a href="https://www.facebook.com/privacy/policy" target="_blank">facebook.com/privacy</a></td></tr>
+          <tr><td><strong>AppLovin MAX</strong></td><td><a href="https://www.applovin.com/privacy" target="_blank">applovin.com/privacy</a></td></tr>
+          <tr><td><strong>Unity Ads</strong></td><td><a href="https://unity.com/legal/privacy-policy" target="_blank">unity.com/privacy</a></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. GDPR -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon indigo">🇪🇺</div>
+      <div>
+        <h2>GDPR & Privacy Consent</h2>
+        <span>EEA, UK & Switzerland users</span>
+      </div>
+    </div>
+    <ul class="list">
+      <li>A consent dialog is shown on first launch before any personalized ads are displayed</li>
+      <li>You can withdraw or change consent anytime via Settings → Privacy Settings</li>
+      <li>Without consent, only non-personalized ads are shown</li>
+      <li>We use Google's User Messaging Platform (UMP) to manage consent</li>
+    </ul>
+  </div>
+
+  <!-- 7. CHILDREN -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon pink">👶</div>
+      <div>
+        <h2>Children's Privacy</h2>
+        <span>Under 13</span>
+      </div>
+    </div>
+    <p style="font-size:14px;color:#9ca3af;">
+      AppLock Pro is not directed to children under the age of 13. We do not knowingly collect personal data from children. If you believe a child has provided us with personal data, please contact us and we will promptly delete it.
+    </p>
+  </div>
+
+  <!-- 8. RETENTION -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon teal">🗑️</div>
+      <div>
+        <h2>Data Retention & Deletion</h2>
+        <span>How long we keep data</span>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Data</th><th>Retention</th><th>How to Delete</th></tr>
+        <tr><td>Local app data (photos, logs, settings)</td><td>Until app uninstall</td><td>Uninstall app</td></tr>
+        <tr><td>Intruder photos</td><td>Until manually deleted</td><td>Security screen → Delete</td></tr>
+        <tr><td>Firebase Analytics data</td><td>Up to 14 months</td><td>Contact us</td></tr>
+        <tr><td>Crashlytics reports</td><td>90 days</td><td>Auto-deleted</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 9. CONTACT -->
+  <div class="contact-card">
+    <h2>Questions or Concerns?</h2>
+    <p>We're happy to answer any questions about your privacy and data.</p>
+    <a href="mailto:nextgenversesolutions@gmail.com">✉️ nextgenversesolutions@gmail.com</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 NextGenVerse Solutions · AppLock Pro · All rights reserved
+</footer>
+
+</body>
+</html>
